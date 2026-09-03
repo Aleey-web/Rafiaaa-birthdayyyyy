@@ -1,1 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Happy Birthday Rafia ❤️</title>
+
+  <!-- Cute + handwritten fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Floating emoji background -->
+  <div id="emoji-container"></div>
+
+  <!-- MAIN WEBSITE -->
+  <main id="app">
+
+
+    <!-- =========================
+         START SCREEN
+    ========================== -->
+
+    <section class="screen active" id="start-screen">
+
+      <div class="glow"></div>
+
+      <div class="start-card">
+
+        <div class="birthday-emoji">🎂</div>
+
+        <p class="small-text">HEY BIRTHDAY GIRL 👀</p>
+
+        <h1>Happy 17th Birthday</h1>
+
+        <h2>Rafia ❤️</h2>
+
+        <p class="intro-text">
+          Okay... before you continue 😭❤️
+          <br>
+          This isn't just a normal birthday wish.
+        </p>
+
+        <button class="cute-btn" onclick="startSurprise()">
+          Start your surprise ✨
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         QUESTION SECTION
+    ========================== -->
+
+    <section class="screen" id="question-screen">
+
+      <div class="question-card">
+
+        <div class="progress">
+          <div class="progress-bar" id="progress-bar"></div>
+        </div>
+
+        <div id="question-number"></div>
+
+        <div id="question-content">
+
+          <!-- JavaScript puts questions here -->
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         STORY SECTION
+    ========================== -->
+
+    <section class="screen" id="story-screen">
+
+      <div class="story-card">
+
+        <div class="story-emoji">🌙✨</div>
+
+        <p class="story-line">Around 1–1.5 years ago...</p>
+
+        <p class="story-line">Two random people met in a random GC. 😭</p>
+
+        <p class="story-line">Nobody knew what would happen next. 👀</p>
+
+        <p class="story-line">But somehow...</p>
+
+        <h1 class="pindi">Pindi 🤝 FSD</h1>
+
+        <p class="story-line">
+          ...a random person became one of my close friends. ❤️
+        </p>
+
+        <button class="cute-btn" onclick="showLetters()">
+          But I still have something to say 💌
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         LETTERS SECTION
+    ========================== -->
+
+    <section class="screen" id="letters-screen">
+
+      <div class="letters-container">
+
+        <h1>Some letters for you 💌</h1>
+
+        <p class="letters-subtitle">
+          Open them slowly... each one has something I wanted to tell you. 🥹❤️
+        </p>
+
+
+        <div class="letters-grid">
+
+          <div class="envelope" onclick="openLetter(1)">
+            <div class="envelope-emoji">💌</div>
+            <p>Open when you want to smile ❤️</p>
+          </div>
+
+
+          <div class="envelope" onclick="openLetter(2)">
+            <div class="envelope-emoji">💭</div>
+            <p>A few things about you 👀❤️</p>
+          </div>
+
+
+          <div class="envelope" onclick="openLetter(3)">
+            <div class="envelope-emoji">📍</div>
+            <p>From Pindi to FSD ❤️</p>
+          </div>
+
+
+          <div class="envelope special-envelope" onclick="openLetter(4)">
+            <div class="envelope-emoji">❤️</div>
+            <p>Open this one last... 🥹</p>
+          </div>
+
+        </div>
+
+
+        <div class="letter-modal" id="letter-modal">
+
+          <div class="letter-paper">
+
+            <button class="close-letter" onclick="closeLetter()">
+              ✕
+            </button>
+
+            <div id="letter-content"></div>
+
+          </div>
+
+        </div>
+
+
+        <button class="cute-btn music-next" onclick="showMusic()">
+          One more thing... 🎧❤️
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         MUSIC SECTION
+    ========================== -->
+
+    <section class="screen" id="music-screen">
+
+      <div class="music-card">
+
+        <div class="music-emoji">🎧</div>
+
+        <h1>Okay... listen to this. ❤️</h1>
+
+        <p>
+          A little song for the birthday girl. 🎶
+        </p>
+
+        <!-- We will add the actual song later -->
+        <button class="cute-btn" id="music-button">
+          ▶ Play the song
+        </button>
+
+        <p class="music-note">
+          Close your eyes for a second and just enjoy. 🥹✨
+        </p>
+
+        <button class="cute-btn final-button" onclick="showFinal()">
+          Continue 👀
+        </button>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FINAL SURPRISE
+    ========================== -->
+
+    <section class="screen" id="final-screen">
+
+      <div class="final-card">
+
+        <div class="final-emojis">🎉🎂❤️✨🥹</div>
+
+        <p class="small-text">ONE LAST THING...</p>
+
+        <h1>HAPPY 17TH BIRTHDAY</h1>
+
+        <h2>RAFIA ❤️</h2>
+
+        <p class="final-message">
+          From a random GC...
+          <br>
+          to one of my favorite friendships.
+          <br><br>
+          Pindi 🤝 FSD ❤️
+        </p>
+
+        <div class="signature">
+          Made with love by
+          <br>
+          <strong>ALI ❤️</strong>
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
